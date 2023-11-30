@@ -6,5 +6,5 @@ class Battery(ABC):
         self.current_date = current_date
 
     @abstractmethod
-    def needs_service(self):
+    def battery_needs_service(self):
         pass

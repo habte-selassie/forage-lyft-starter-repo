@@ -8,5 +8,5 @@ class Engine(ABC):
         self.warning_indicator_on = warning_indicator_on
 
     @abstractmethod
-    def needs_service(self):
+    def engine_needs_service(self):
         pass    
