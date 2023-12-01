@@ -1,11 +1,11 @@
-from engine import Engine
+from engine.engine0.engine import Engine
 
 class SternmanEngine(Engine):
-    def __init__(self, last_service_date, warning_light_is_on):
-        super().__init__(last_service_date)
+    def __init__(self, warning_light_is_on):
+       
         self.warning_light_is_on = warning_light_is_on
 
-    def engine_needs_service(self):
+    def needs_service(self):
         if self.warning_light_is_on:
             return True
         else:

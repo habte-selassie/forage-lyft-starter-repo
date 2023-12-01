@@ -1,16 +1,16 @@
 from datetime import datetime
-from battery import Battery
-
+from engine.batterys.battery import Battery
+from utils import add_years_to_date
 class Nubbin_Battery(Battery):
     def _init_(self,last_service_date,current_date):
-         super. _init_(last_service_date)
          self.last_service_date = last_service_date
          self.current_date = current_date
     
-    def baterry_needs_service(self):
-         service_threshold_date = self.last_service_date.replace(year = self.last_service_date + 4)
-         current_date = datetime.today.date()
-         if service_threshold_date < current_date :
+    def needs_service(self):
+         date_which_battery_needs_to_serve = add_years_to_date(self.last_service_date,5)
+         current_date_time = datetime.now()
+         current_date = current_date_time.date()
+         if date_which_battery_needs_to_serve < current_date :
                return True
          else :
                return  False           
