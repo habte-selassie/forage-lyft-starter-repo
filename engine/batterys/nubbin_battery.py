@@ -1,7 +1,7 @@
 from datetime import datetime
 from engine.batterys.battery import Battery
 from utils import add_years_to_date
-class Nubbin_Battery(Battery):
+class NubbinBattery(Battery):
     def _init_(self,last_service_date,current_date):
          self.last_service_date = last_service_date
          self.current_date = current_date

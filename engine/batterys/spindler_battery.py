@@ -1,7 +1,7 @@
 from datetime import datetime
 from engine.batterys.battery import Battery
 from utils import add_years_to_date
-class Spindler_Battery(Battery):
+class SpindlerBattery(Battery):
     def _init_(self,last_service_date,current_date):
         super.__init__(last_service_date)
         self.current_date = current_date
