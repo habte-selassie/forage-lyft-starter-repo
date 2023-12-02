@@ -1,8 +1,8 @@
 from engine.tires.tire import Tire
 
-class Carrigan_Tires(Tire):
+class CarriganTires(Tire):
     @staticmethod
-    def should_service_tires(tire_wear_sensors):
+    def needs_service(tire_wear_sensors):
         need_to_give_service = False
 
         tire_wear_sensors = [0.2, 0.6, 0.8, 1.0]
@@ -16,7 +16,7 @@ class Carrigan_Tires(Tire):
 
 carrigan_tire_wear_ = [0.2, 0.6, 0.8, 1.0]
 
-if Carrigan_Tires.should_service_tires(carrigan_tire_wear_):
+if CarriganTires.needs_service(carrigan_tire_wear_):
     print ("carrigan tire should give service")
 else:
     print ("carrigan tire should not give service")
